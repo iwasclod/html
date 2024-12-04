@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>העתקת פרטי חשבון</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const textToCopy = "נא להעביר    שח לחשבון 181201455 סניף 136 דיסקונט ע\"ש לייזרוביץ-ברק חברת עורכי דין";
+            navigator.clipboard.writeText(textToCopy).then(function() {
+                const successMessage = document.createElement("div");
+                successMessage.textContent = "בוצעה העתקה בהצלחה";
+                successMessage.style.position = "absolute";
+                successMessage.style.top = "50%";
+                successMessage.style.left = "50%";
+                successMessage.style.transform = "translate(-50%, -50%)";
+                successMessage.style.fontSize = "2em";
+                successMessage.style.fontWeight = "bold";
+                document.body.appendChild(successMessage);
+            }, function(err) {
+                alert("נכשל להעתיק ללוח, אנא נסה שוב.");
+            });
+        });
+    </script>
+</head>
+<body>
+</body>
+</html>
